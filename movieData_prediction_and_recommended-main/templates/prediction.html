@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+    <body bgcolor="#00FF00">
+        <center></h3><b><a href="{{ url_for('predicts')}}">PREDICTION MOVIE</a></b></h3></center>
+        <div id="contanier">
+        <ul>
+        <li>  <a href="{{ url_for('predicts')}}">Prediciton</a></li>
+        <li> <a href="{{ url_for('reco')}}">Recommend_Movie</a></li>
+        </ul>
+       </div>
+       <br><br>
+       <br><br>
+       <center> 
+        <label><b>NEW DATA FOR MOVIE PREDICTION</b></label>
+         <form method="post" class="form">
+            <input type="text" name="num_critic_for_reviews" placeholder="num_critic_for_reviews" required="required"><br>
+            <input type="text" name="duration" placeholder="duration" required="required"><br>
+            <input type="text" name="director_facebook_likes" placeholder="director_facebook_likes" required="required"><br>
+            <input type="text" name="actor_3_facebook_likes" placeholder="actor_3_facebook_likes" required="required"><br>
+            <input type="text" name="actor_1_facebook_likes" placeholder="actor_1_facebook_likes" required="required"><br>
+            <input type="text" name="gross" placeholder="gross" required="required"><br>
+            <input type="text" name="monum_voted_usersvie" placeholder="num_voted_users" required="required"><br>
+            <input type="text" name="cast_total_facebook_likes" placeholder="cast_total_facebook_likes" required="required"><br>
+            <input type="text" name="mofacenumber_in_postervie" placeholder="facenumber_in_poster" required="required"><br>
+            <input type="text" name="movnum_user_for_reviewsie" placeholder="num_user_for_reviews" required="required"><br>
+            <input type="text" name="budget" placeholder="budget" required="required"><br>
+            <input type="text" name="title_year" placeholder="title_year" required="required"><br>
+            <input type="text" name="moactor_2_facebook_likesvie" placeholder="actor_2_facebook_likes" required="required"><br>
+            <input type="text" name="moaspect_ratiovie" placeholder="aspect_ratio" required="required"><br>
+            <input type="text" name="movie_facebook_likes" placeholder="movie_facebook_likes" required="required"><br>
+            <input type="text" name="new_color" placeholder="new_color" required="required"><br>
+            
+            <input type="submit" formaction={{ url_for('predict')}} value="Prediction">
+            <input type="submit" formaction={{ url_for('dtpredict')}} value="decision Tree">
+
+        </form>
+        </center>
+        
+        <h3><b>{{prediction_text}}</b></h3>
+
+
+
+
+        <script src="" async defer></script>
+    </body>
+</html>

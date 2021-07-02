@@ -1,0 +1,52 @@
+#contanier ul {
+    list-style: none;
+}
+
+#contanier ul li {
+    background-color: white;
+    width: 50px;
+    border: 1px solid gray;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    float: left;
+    font: 10px;
+}
+
+table.dataframe,
+.dataframe th,
+.dataframe td {
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+    border-collapse: collapse;
+    text-align: left;
+    padding: 10px;
+    margin-top: 150px;
+    margin-bottom: 70px;
+    font-size: 0.9em;
+}
+
+tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #ffff99;
+}
+
+#contanier ul li:hover {
+    background-color: gray;
+}
+
+#contanier ul li:hover>ul {
+    display: block;
+}
+
+#form {
+    margin-left: 160px;
+    margin-top: -200px;
+}
